@@ -47,7 +47,7 @@ namespace ReversePlague
 					ReferenceHub player = ev.Player;
 					Vector3 pos = player.transform.position;
 					ev.Player.characterClassManager.SetPlayersClass(RoleType.Scp0492, ev.Player.gameObject);
-					Timing.CallDelayed(0.1f, () => player.plyMovementSync.OverridePosition(pos, 0f));
+					Timing.CallDelayed(Configs.teleportDelay, () => player.plyMovementSync.OverridePosition(pos, 0f));
 				}
 			}
 		}

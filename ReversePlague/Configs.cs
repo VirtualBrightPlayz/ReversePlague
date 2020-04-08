@@ -11,6 +11,8 @@
 		internal static bool tutorialHeal;
 		internal static bool tutorialInfect;
 
+        internal static float teleportDelay;
+
 		public static void ReloadConfigs()
 		{
 			range = Plugin.Config.GetFloat("rp_range", 5f);
@@ -21,6 +23,8 @@
 
 			tutorialHeal = Plugin.Config.GetBool("rp_tutorial_heal", false);
 			tutorialInfect = Plugin.Config.GetBool("rp_tutorial_infect", true);
+
+            teleportDelay = Plugin.Config.GetFloat("rp_teleport_delay", 0.2f);
 		}
 	}
 }
