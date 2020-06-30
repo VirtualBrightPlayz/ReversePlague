@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace ReversePlague
 {
-	partial class EventHandlers
+    partial class EventHandlers
 	{
 		private bool isRoundStarted = false;
 
@@ -47,7 +47,7 @@ namespace ReversePlague
 					ReferenceHub player = ev.Player;
 					Vector3 pos = player.transform.position;
 					ev.Player.characterClassManager.SetPlayersClass(RoleType.Scp0492, ev.Player.gameObject);
-					Timing.CallDelayed(Configs.teleportDelay, () => player.plyMovementSync.OverridePosition(pos, 0f));
+					Timing.CallDelayed(Configs.teleportDelay, () => player.playerMovementSync.OverridePosition(pos, 0f));
 				}
 			}
 		}
